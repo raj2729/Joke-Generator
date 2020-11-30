@@ -1,0 +1,55 @@
+*{
+    font-family :Bradley Hand ITC , Monotype Corsiva ;
+    font-weight:bolder;
+    margin:0;
+    padding:0;
+}
+.hero{
+    height:100%;
+    width:100%;
+    background-image: url("./images/img3.jpg");
+    /* linear-gradient(rgba(0,0,0,0,4),rgba(0,0,0,0,4)), */
+    background-position: center;
+    background-size:cover;
+    position:absolute;
+}
+.form_box{
+    height:490px;
+    width:650px;
+    position:relative;
+    margin:5% auto;
+    background-color:white;
+    padding:10px;
+    background-image: url("./images/img1.jpg");
+    background-size:cover;
+    /* background: linear-gradient(to right,#f9b0d266,#ff1073); */
+}
+.button_box{
+    width:500px;
+    /* margin:25px auto; */
+    margin-top:30px;
+    margin-left: 190px;
+    position:relative;
+    border-radius:30px;
+    font-size:25px;
+    
+}
+/* background: linear-gradient(to right,#f9b0d266,#ff1073); */
+#get_joke{
+    height:70px;
+    width:220px;
+    margin-top:10%;
+    margin-left:6%;
+    padding:20px;
+    cursor:pointer;
+    background:linear-gradient(to right,#ff105f,#ffad06);
+    border:0;
+    position:170;
+    outline:none;
+    font-size:20;
+    border-radius:30px;
+    font-size: x-large;
+}
+#id{
+    font: 30px;
+}

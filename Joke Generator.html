@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="author" content="Raj">		
+		<title>Joke Generator</title>
+		<link rel="stylesheet" href="task.css">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>	
+	</head>
+	
+	<body>
+	
+	    <div class="hero">
+		
+		    <div class="form_box">
+			    <div class="button_box">
+				    
+			        <h1>Joke Generator</h1>
+					
+
+			    </div>
+				<!-- <input type="text" id="enter_category" placeholder="Enter category"> -->
+                <button id="get_joke" >Get joke</button>
+		        <br><br><br><div id="joke"style="font-size:x-large">Hi</div><br><br>
+                <!-- <div id="category">Here is the category</div><br><br>
+		        <div id="idOfJoke">Here is the Id of the joke</div><br><br> -->
+
+
+			</div>
+		</div>
+	</body>
+    
+	
+	<script> 
+	    const jokeElement= document.getElementById("joke")
+		// const categoryElement= document.getElementById("category")
+		// const idElement= document.getElementById("idOfJoke")
+
+		src="https://unpkg.com/axios/dist/axios.min.js"	
+		var a = document.getElementById("get_joke").addEventListener("click",getJoke)
+		
+        function getJoke(a) {
+			// cat=document.getElementById("enter_category")
+			
+                axios.get(`https://sv443.net/jokeapi/v2/joke/Programming`)
+			    .then(res => {
+					
+					
+				    console.log(res.data.joke)
+				    console.log(res.data.category)
+				    console.log(res.data.id)
+				    //  console.log(res);
+				    //  console.log(res.data.flags)
+				    //  console.log(res.data.error)
+				    //  console.log(res.data.lang)
+					if(res.data.joke != undefined) 
+					{
+						jokeElement.innerHTML = (`${res.data.joke}`);
+						// categoryElement.innerHTML = (`Category : ${res.data.category}`);
+				        // idElement.innerHTML = (`Id : ${res.data.id}`);
+					}
+				    else{
+						jokeElement.innerHTML = (`${res.data.setup} => ${res.data.delivery}`);
+						// categoryElement.innerHTML = (`Category : ${res.data.category}`);
+				        // idElement.innerHTML = (`Id : ${res.data.id}`);
+					}			
+				}) 
+        }
+ </script> 
+	
+	
+</html>
